@@ -1,3 +1,5 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
+
 html,
 body {
   padding: 0;
@@ -13,4 +15,22 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.go-back {
+  z-index: 99;
+  color: white;
+  font-size: 35px;
+  background-color: black;
+  padding: 10px 30px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 30px;
 }
