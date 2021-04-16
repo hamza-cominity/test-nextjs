@@ -7,12 +7,12 @@ const Home = (props) => {
   return (
     <>
       <h1>Users</h1>
-      <nav class="panel">
+      <nav className="panel">
         {props.users.map((user, id) => (
           <Link key={id} href={`/${user.id}`}>
-            <a class="panel-block is-active">
-              <span class="panel-icon">
-                <i class="fas fa-book" aria-hidden="true"></i>
+            <a className="panel-block is-active">
+              <span className="panel-icon">
+                <i className="fas fa-book" aria-hidden="true"></i>
               </span>
               {user.name}
             </a>
@@ -23,7 +23,7 @@ const Home = (props) => {
   )
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const usersRequest = await axios.get('https://jsonplaceholder.typicode.com/users')
   const users = usersRequest.data
 
